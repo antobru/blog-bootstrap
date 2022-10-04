@@ -3,11 +3,11 @@
 		class="form-label">
 		Title
 	</label>
-	<input type="text"
+	<input [(ngModel)]="post.title"
+		type="text"
 		class="form-control"
 		id="title"
 		name="title"
-        [(ngModel)]="post.title"
 		placeholder="Post title">
 
 </div>
@@ -16,23 +16,33 @@
 		class="form-label">
 		Body
 	</label>
-	<textarea class="form-control"
+	<textarea [(ngModel)]="post.body"
+		class="form-control"
 		id="body"
 		name="body"
 		rows="3"
-        [(ngModel)]="post.body"
 		placeholder="Post body"></textarea>
 </div>
 <div class="mb-3">
-	<label for="body"
+	<label for="userId"
 		class="form-label">
 		User
 	</label>
-    <select class="form-control" name="userId" [(ngModel)]="post.userId">
-        <option *ngFor="let user of users" [value]="user.id">{{user.email}}</option>
-    </select>
+	<select [(ngModel)]="post.userId"
+		class="form-control"
+		id="userId"
+		name="userId">
+		<option *ngFor="let user of users"
+			[value]="user.id">
+			{{user.email}}
+		</option>
+	</select>
 </div>
 
 <div class="mb-3">
-    <button type="button" class="btn btn-success" (click)="saveFn()">Salva</button>
+	<button (click)="saveFn()"
+		type="button"
+		class="btn btn-success">
+		Salva
+	</button>
 </div>
