@@ -22,11 +22,11 @@ export class PostsService {
     return this.http.get<Comment[]>(`https://jsonplaceholder.typicode.com/posts/${postId}/comments`).toPromise();
   }
 
-  create(post: Post) {
+  addPost(post: Post) {
     return this.http.post<Post[]>(`https://jsonplaceholder.typicode.com/posts`, post).toPromise();
   }
 
-  update(id: number, post: Post) {
+  updatePost(id: number, post: Post) {
     return this.http.put<Post[]>(`https://jsonplaceholder.typicode.com/posts/${id}`, post).toPromise();
   }
 

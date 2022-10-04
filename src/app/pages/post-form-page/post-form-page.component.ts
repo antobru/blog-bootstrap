@@ -45,7 +45,7 @@ export class PostFormPageComponent implements OnInit {
 
   save(post: Post) {
     if (!post.id) {
-      this.postsService.create(post)
+      this.postsService.addPost(post)
         .then(result => {
           this.showSuccessMessage('Post inserted!');
         }).catch(err => {
@@ -53,7 +53,7 @@ export class PostFormPageComponent implements OnInit {
         });
       return;
     }
-    this.postsService.update(post.id, post)
+    this.postsService.updatePost(post.id, post)
       .then(result => {
         this.showSuccessMessage('Post updated!');
       }).catch(err => {
