@@ -15,7 +15,10 @@ export class PostsListComponent implements OnInit {
   constructor(private postsService: PostsService) { }
 
   ngOnInit(): void {
-    this.postsService.findAll().then(result => this.posts = result);
+    this.postsService.findAll().then(result => {
+      this.posts = result;
+      console.log(result);
+    });
   }
 
 }

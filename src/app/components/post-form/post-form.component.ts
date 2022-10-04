@@ -1,5 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Post } from 'src/app/models/post.model';
+import { User } from 'src/app/models/user.model';
+import { UsersService } from 'src/app/services/users.service';
 
 @Component({
   selector: 'app-post-form',
@@ -26,9 +28,14 @@ export class PostFormComponent implements OnInit {
   */
   @Output() save: EventEmitter<Post> = new EventEmitter();
 
-  constructor() { }
+  public users: User[] = [];
+
+  constructor(private usersService: UsersService) { }
 
   ngOnInit(): void {
+    this.usersService.findAll().then(res => {
+      this.users = res;
+    });
   }
 
   saveFn() {

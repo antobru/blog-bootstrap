@@ -9,6 +9,7 @@
 		name="title"
         [(ngModel)]="post.title"
 		placeholder="Post title">
+
 </div>
 <div class="mb-3">
 	<label for="body"
@@ -21,6 +22,15 @@
 		rows="3"
         [(ngModel)]="post.body"
 		placeholder="Post body"></textarea>
+</div>
+<div class="mb-3">
+	<label for="body"
+		class="form-label">
+		User
+	</label>
+    <select class="form-control" name="userId" [(ngModel)]="post.userId">
+        <option *ngFor="let user of users" [value]="user.id">{{user.email}}</option>
+    </select>
 </div>
 
 <div class="mb-3">
