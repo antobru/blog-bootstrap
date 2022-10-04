@@ -9,7 +9,7 @@ import { PostFormComponent } from './post-form/post-form.component';
 @NgModule({
     declarations: [
         NavbarComponent,
-        PostFormComponent
+        PostFormComponent,
     ],
     imports: [
         NgbModule,
@@ -21,5 +21,5 @@ import { PostFormComponent } from './post-form/post-form.component';
         NavbarComponent,
         PostFormComponent
     ]
-  })
-  export class ComponentsModule { }
+})
+export class ComponentsModule { }

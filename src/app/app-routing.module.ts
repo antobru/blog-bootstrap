@@ -13,6 +13,13 @@ const routes: Routes = [
   { path: 'posts', component: PostsListComponent },
   { path: 'posts/:postId/comments', component: PostCommentsComponent },
   { path: 'posts/:postId', component: PostDetailComponent},
+  /*
+    Le rotte 'post' e 'post/:id' servono per gestire l'inserimento e
+    la modifica dei post.
+    Come potete notare entrambe fanno riferimento allo stesso componente
+    quindi sarà il componente a verificare su quale rotta si trova e quindi
+    a cambiare comportamente in base all'inserimento o alla modifca del post 
+  */
   { path: 'post', component: PostFormPageComponent },
   { path: 'post/:id', component: PostFormPageComponent },
 ];

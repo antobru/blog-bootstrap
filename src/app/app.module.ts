@@ -23,7 +23,7 @@ import { PostFormPageComponent } from './pages/post-form-page/post-form-page.com
     PostCommentsComponent,
     PostDetailComponent,
     UsersListComponent,
-    PostFormPageComponent
+    PostFormPageComponent,
   ],
   imports: [
     BrowserModule,
