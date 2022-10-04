@@ -11,6 +11,7 @@ export class NavbarComponent implements OnInit {
   public links = [
     { title: 'Home', fragment: 'home', path: '/' },
     { title: 'Posts', fragment: 'posts', path: '/posts' },
+    { title: 'Users', fragment: 'users', path: '/users' },
   ]
 
   constructor(public route: ActivatedRoute) { }

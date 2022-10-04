@@ -1,0 +1,13 @@
+<app-post-form [post]="post" (save)="save($event)"></app-post-form>
+
+<ngb-alert *ngIf="successMsg"
+	[type]="'success'"
+	(closed)="successMsg = undefined">
+	{{successMsg}}
+</ngb-alert>
+
+<ngb-alert *ngIf="errorMsg"
+	[type]="'danger'"
+	(closed)="errorMsg = undefined">
+	{{errorMsg}}
+</ngb-alert>

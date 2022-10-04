@@ -1,0 +1,28 @@
+<div class="mb-3">
+	<label for="title"
+		class="form-label">
+		Title
+	</label>
+	<input type="text"
+		class="form-control"
+		id="title"
+		name="title"
+        [(ngModel)]="post.title"
+		placeholder="Post title">
+</div>
+<div class="mb-3">
+	<label for="body"
+		class="form-label">
+		Body
+	</label>
+	<textarea class="form-control"
+		id="body"
+		name="body"
+		rows="3"
+        [(ngModel)]="post.body"
+		placeholder="Post body"></textarea>
+</div>
+
+<div class="mb-3">
+    <button type="button" class="btn btn-success" (click)="saveFn()">Success</button>
+</div>

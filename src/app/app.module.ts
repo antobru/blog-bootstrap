@@ -12,6 +12,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { PostCommentsComponent } from './pages/post-comments/post-comments.component';
 import { PostDetailComponent } from './pages/post-detail/post-detail.component';
+import { UsersListComponent } from './pages/users-list/users-list.component';
+import { PostFormPageComponent } from './pages/post-form-page/post-form-page.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { PostDetailComponent } from './pages/post-detail/post-detail.component';
     HomeComponent,
     PostsListComponent,
     PostCommentsComponent,
-    PostDetailComponent
+    PostDetailComponent,
+    UsersListComponent,
+    PostFormPageComponent
   ],
   imports: [
     BrowserModule,

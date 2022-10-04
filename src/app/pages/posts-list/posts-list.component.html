@@ -1,6 +1,11 @@
 <div class="row"
 	style="margin-top: 2em;">
 	<div class="col">
+		<button [routerLink]="'/post'"
+			type="button"
+			class="btn btn-primary mr-3">
+			Aggiungi un post
+		</button>
 		<select [(ngModel)]="viewMode"
 			class="form-select form-select-lg mb-3">
 			<option value="cards">
@@ -22,14 +27,31 @@
 			<div class="card-body">
 				<h5 class="card-title">{{post.title}}</h5>
 				<p class="card-text">{{post.body}}</p>
-				<a [routerLink]="'/posts/' + post.id"
-					class="btn btn-primary">
-					Vedi dettagli
-				</a>
-				<a [routerLink]="'/posts/' + post.id + '/comments'"
-					class="btn btn-primary">
-					Vedi commenti
-				</a>
+				<div ngbDropdown
+					class="d-inline-block">
+					<button type="button"
+						class="btn btn-outline-primary"
+						id="dropdownBasic1"
+						ngbDropdownToggle>
+						Actions
+					</button>
+					<div ngbDropdownMenu
+						aria-labelledby="dropdownBasic1">
+						<button [routerLink]="'/posts/' + post.id"
+							ngbDropdownItem>
+							Dettagli
+						</button>
+						<button [routerLink]="'/posts/' + post.id + '/comments'"
+							ngbDropdownItem>
+							Commenti
+						</button>
+						<button [routerLink]="'/post/' + post.id"
+							ngbDropdownItem>
+							Modifica
+						</button>
+						<button ngbDropdownItem>Elimina</button>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -63,11 +85,18 @@
 							</button>
 							<div ngbDropdownMenu
 								aria-labelledby="dropdownBasic1">
+								<button [routerLink]="'/posts/' + post.id"
+									ngbDropdownItem>
+									Dettagli
+								</button>
 								<button [routerLink]="'/posts/' + post.id + '/comments'"
 									ngbDropdownItem>
-									Vedi commenti
+									Commenti
 								</button>
-								<button ngbDropdownItem>Modifica</button>
+								<button [routerLink]="'/post/' + post.id"
+									ngbDropdownItem>
+									Modifica
+								</button>
 								<button ngbDropdownItem>Elimina</button>
 							</div>
 						</div>
