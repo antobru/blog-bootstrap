@@ -1,0 +1,11 @@
+<ul [activeId]="route.fragment | async"
+	ngbNav
+	class="nav-tabs">
+	<li *ngFor="let link of links"
+		[ngbNavItem]="link.fragment">
+		<a [routerLink]="link.path"
+			ngbNavLink>
+			{{ link.title }}
+		</a>
+	</li>
+</ul>
