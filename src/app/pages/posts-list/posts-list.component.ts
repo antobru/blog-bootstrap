@@ -14,11 +14,22 @@ export class PostsListComponent implements OnInit {
 
   constructor(private postsService: PostsService) { }
 
-  ngOnInit(): void {
-    this.postsService.findAll().then(result => {
-      this.posts = result;
-      console.log(result);
-    });
+  async ngOnInit(): Promise<void> {
+
+    // this.postsService.findAll().then(result => {
+    //   this.posts = result;
+    //   console.log(result);
+    // });
+
+    /*
+      
+    */
+    try {
+      this.posts = await this.postsService.findAll();
+    } catch (error) {
+      alert("Non è stato possibile recuperare la lista dei post");
+    }
+
   }
 
 }
