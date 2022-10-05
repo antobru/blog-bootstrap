@@ -17,7 +17,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr *ngFor="let user of users; index as i">
+				<tr *ngFor="let user of (users$ | async); index as i">
 					<th scope="row">{{ user.id }}</th>
 					<td>{{user.name}}</td>
 					<td>{{user.username}}</td>
@@ -29,6 +29,19 @@
 					</td>
 				</tr>
 			</tbody>
+			<!-- <tbody>
+				<tr *ngFor="let user of users; index as i">
+					<th scope="row">{{ user.id }}</th>
+					<td>{{user.name}}</td>
+					<td>{{user.username}}</td>
+					<td>{{user.email}}</td>
+					<td>{{user.role}}</td>
+					<td>
+						<button class="btn btn-primary mr-3" [routerLink]="'/user/' + user.id">Modifica</button>
+						<button class="btn btn-danger" (click)="removeUser(user)">Elimina</button>
+					</td>
+				</tr>
+			</tbody> -->
 		</table>
 	</div>
 </div>

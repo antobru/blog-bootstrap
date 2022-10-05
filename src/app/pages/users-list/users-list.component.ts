@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/models/user.model';
 import { UsersService } from 'src/app/services/users.service';
-
+import { BehaviorSubject } from 'rxjs';
 @Component({
   selector: 'app-users-list',
   templateUrl: './users-list.component.html',
@@ -9,26 +9,36 @@ import { UsersService } from 'src/app/services/users.service';
 })
 export class UsersListComponent implements OnInit {
 
-  public users: User[] = [];
+  // public users: User[] = [];
 
-  constructor(private usersService: UsersService) { }
+  private users: BehaviorSubject<User[]> = new BehaviorSubject<User[]>([]);
+  public users$ = this.users.asObservable();
 
-  ngOnInit(): void {
-    this.getUsers();
+  constructor(private usersService: UsersService) {
   }
 
-  getUsers() {
-    this.usersService.findAll()
-      .then(result => this.users = result || []);
+  async ngOnInit() {
+    await this.getUsers();
   }
 
-  removeUser(user: User) {
+  async getUsers() {
+
+    // this.usersService.findAll$().subscribe(res => {
+    //   this.users = res;
+    // })
+
+    // this.users = await this.usersService.findAll();
+
+    this.usersService.findAll$().subscribe(results => {
+      this.users.next(results);
+    });
+  }
+
+  async removeUser(user: User) {
     if (user.id) {
-      this.usersService.delete(user.id)
-        .then(res => {
-          alert("User deleted!");
-          this.getUsers();
-        });
+      await this.usersService.delete(user.id);
+      alert("User deleted!");
+      await this.getUsers();
     }
   }
 

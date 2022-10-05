@@ -10,6 +10,10 @@ export class UsersService {
 
   constructor(private http: HttpClient) { }
 
+  findAll$() {
+    return this.http.get<User[]>(environment.BASE_API + '/users');
+  }
+
   findAll() {
     return this.http.get<User[]>(environment.BASE_API + '/users').toPromise();
   }
