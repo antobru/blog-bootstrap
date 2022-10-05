@@ -14,6 +14,8 @@ import { PostCommentsComponent } from './pages/post-comments/post-comments.compo
 import { PostDetailComponent } from './pages/post-detail/post-detail.component';
 import { UsersListComponent } from './pages/users-list/users-list.component';
 import { PostFormPageComponent } from './pages/post-form-page/post-form-page.component';
+import { UserFormPageComponent } from './pages/user-form-page/user-form-page.component';
+import { UserSubscriptionComponent } from './pages/user-subscription/user-subscription.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { PostFormPageComponent } from './pages/post-form-page/post-form-page.com
     PostDetailComponent,
     UsersListComponent,
     PostFormPageComponent,
+    UserFormPageComponent,
+    UserSubscriptionComponent,
   ],
   imports: [
     BrowserModule,

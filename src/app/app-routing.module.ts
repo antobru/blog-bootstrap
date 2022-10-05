@@ -5,6 +5,8 @@ import { PostCommentsComponent } from './pages/post-comments/post-comments.compo
 import { PostDetailComponent } from './pages/post-detail/post-detail.component';
 import { PostFormPageComponent } from './pages/post-form-page/post-form-page.component';
 import { PostsListComponent } from './pages/posts-list/posts-list.component';
+import { UserFormPageComponent } from './pages/user-form-page/user-form-page.component';
+import { UserSubscriptionComponent } from './pages/user-subscription/user-subscription.component';
 import { UsersListComponent } from './pages/users-list/users-list.component';
 
 const routes: Routes = [
@@ -22,6 +24,12 @@ const routes: Routes = [
   */
   { path: 'post', component: PostFormPageComponent },
   { path: 'post/:id', component: PostFormPageComponent },
+
+  { path: 'user', component: UserFormPageComponent },
+  { path: 'user/:id', component: UserFormPageComponent },
+
+
+  { path: 'users/subscription', component: UserSubscriptionComponent }
 ];
 
 @NgModule({

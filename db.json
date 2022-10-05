@@ -1,5 +1,24 @@
 {
-  "posts": [],
+  "posts": [
+    {
+      "title": "Post title 1",
+      "body": "post body 1\npost body 1\npost body 1\npost body 1\npost body 1\npost body 1\npost body 1\npost body 1\npost body 1\npost body 1\npost body 1\npost body 1\npost body 1\npost body 1\npost body 1\npost body 1",
+      "userId": "3",
+      "id": 1
+    },
+    {
+      "title": "Post title 2",
+      "body": "post body 2\npost body 2\npost body 2\npost body 2",
+      "userId": "6",
+      "id": 2
+    },
+    {
+      "title": "Post title 3",
+      "body": "post body 3\npost body 3\npost body 3\npost body 3",
+      "userId": "9",
+      "id": 3
+    }
+  ],
   "comments": [],
   "users": [
     {
@@ -231,6 +250,20 @@
         "catchPhrase": "Centralized empowering task-force",
         "bs": "target end-to-end models"
       }
+    },
+    {
+      "name": "Antonio",
+      "username": "antonio.bruno",
+      "email": "Bruno",
+      "role": "basic",
+      "id": 11
+    },
+    {
+      "name": "Rocco",
+      "username": "rocco",
+      "email": "rocco@libero.it",
+      "role": "admin",
+      "id": 12
     }
   ]
 }

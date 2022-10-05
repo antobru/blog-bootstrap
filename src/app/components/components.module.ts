@@ -5,11 +5,13 @@ import { RouterModule } from "@angular/router";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { NavbarComponent } from "./navbar/navbar.component";
 import { PostFormComponent } from './post-form/post-form.component';
+import { UserFormComponent } from './user-form/user-form.component';
 
 @NgModule({
     declarations: [
         NavbarComponent,
         PostFormComponent,
+        UserFormComponent,
     ],
     imports: [
         NgbModule,
@@ -19,7 +21,8 @@ import { PostFormComponent } from './post-form/post-form.component';
     ],
     exports: [
         NavbarComponent,
-        PostFormComponent
+        PostFormComponent,
+        UserFormComponent
     ]
 })
 export class ComponentsModule { }

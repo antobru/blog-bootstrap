@@ -13,4 +13,17 @@ export class UsersService {
   findAll() {
     return this.http.get<User[]>(environment.BASE_API + '/users').toPromise();
   }
+
+  findById(id: number) {
+    return this.http.get<User>(environment.BASE_API + '/users/' + id).toPromise();
+  }
+
+  create(user: User) {
+    return this.http.post<User>(`${environment.BASE_API }/users`, user).toPromise();
+  }
+
+  update(id: number, user: User) {
+    return this.http.put<User>(`${environment.BASE_API }/users/${id}`, user).toPromise();
+  }
+
 }
