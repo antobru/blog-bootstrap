@@ -42,7 +42,8 @@
         "name": "Romaguera-Crona",
         "catchPhrase": "Multi-layered client-server neural-net",
         "bs": "harness real-time e-markets"
-      }
+      },
+      "role": "basic"
     },
     {
       "id": 2,
@@ -180,7 +181,8 @@
         "name": "Johns Group",
         "catchPhrase": "Configurable multimedia task-force",
         "bs": "generate enterprise e-tailers"
-      }
+      },
+      "role": "basic"
     },
     {
       "id": 8,
@@ -249,21 +251,8 @@
         "name": "Hoeger LLC",
         "catchPhrase": "Centralized empowering task-force",
         "bs": "target end-to-end models"
-      }
-    },
-    {
-      "name": "Antonio",
-      "username": "antonio.bruno",
-      "email": "Bruno",
-      "role": "basic",
-      "id": 11
-    },
-    {
-      "name": "Rocco",
-      "username": "rocco",
-      "email": "rocco@libero.it",
-      "role": "admin",
-      "id": 12
+      },
+      "role": "basic"
     }
   ]
 }

@@ -26,4 +26,8 @@ export class UsersService {
     return this.http.put<User>(`${environment.BASE_API }/users/${id}`, user).toPromise();
   }
 
+  delete(id: number) {
+    return this.http.delete<User>(`${environment.BASE_API }/users/${id}`).toPromise();
+  }
+
 }

@@ -1,5 +1,10 @@
 <div class="row">
 	<div class="col">
+		<button class="btn btn-success mb-3" [routerLink]="'/user'">Aggiungi utente</button>
+	</div>
+</div>
+<div class="row">
+	<div class="col">
 		<table class="table table-striped">
 			<thead>
 				<tr>
@@ -7,6 +12,8 @@
 					<th scope="col">name</th>
 					<th scope="col">username</th>
 					<th scope="col">email</th>
+					<th scope="col">role</th>
+					<th></th>
 				</tr>
 			</thead>
 			<tbody>
@@ -15,6 +22,11 @@
 					<td>{{user.name}}</td>
 					<td>{{user.username}}</td>
 					<td>{{user.email}}</td>
+					<td>{{user.role}}</td>
+					<td>
+						<button class="btn btn-primary mr-3" [routerLink]="'/user/' + user.id">Modifica</button>
+						<button class="btn btn-danger" (click)="removeUser(user)">Elimina</button>
+					</td>
 				</tr>
 			</tbody>
 		</table>

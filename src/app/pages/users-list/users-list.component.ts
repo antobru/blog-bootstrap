@@ -14,8 +14,22 @@ export class UsersListComponent implements OnInit {
   constructor(private usersService: UsersService) { }
 
   ngOnInit(): void {
+    this.getUsers();
+  }
+
+  getUsers() {
     this.usersService.findAll()
       .then(result => this.users = result || []);
+  }
+
+  removeUser(user: User) {
+    if (user.id) {
+      this.usersService.delete(user.id)
+        .then(res => {
+          alert("User deleted!");
+          this.getUsers();
+        });
+    }
   }
 
 }
