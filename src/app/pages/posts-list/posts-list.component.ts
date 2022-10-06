@@ -15,15 +15,6 @@ export class PostsListComponent implements OnInit {
   constructor(private postsService: PostsService) { }
 
   async ngOnInit(): Promise<void> {
-
-    // this.postsService.findAll().then(result => {
-    //   this.posts = result;
-    //   console.log(result);
-    // });
-
-    /*
-      
-    */
     try {
       this.posts = await this.postsService.findAll();
     } catch (error) {

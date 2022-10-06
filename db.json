@@ -66,7 +66,8 @@
         "name": "Deckow-Crist",
         "catchPhrase": "Proactive didactic contingency",
         "bs": "synergize scalable supply-chains"
-      }
+      },
+      "role": "basic"
     },
     {
       "id": 3,
@@ -89,7 +90,8 @@
         "name": "Romaguera-Jacobson",
         "catchPhrase": "Face to face bifurcated interface",
         "bs": "e-enable strategic applications"
-      }
+      },
+      "role": "basic"
     },
     {
       "id": 4,
@@ -112,7 +114,8 @@
         "name": "Robel-Corkery",
         "catchPhrase": "Multi-tiered zero tolerance productivity",
         "bs": "transition cutting-edge web services"
-      }
+      },
+      "role": "admin"
     },
     {
       "id": 5,
@@ -135,7 +138,8 @@
         "name": "Keebler LLC",
         "catchPhrase": "User-centric fault-tolerant solution",
         "bs": "revolutionize end-to-end systems"
-      }
+      },
+      "role": "admin"
     },
     {
       "id": 6,
@@ -253,6 +257,20 @@
         "bs": "target end-to-end models"
       },
       "role": "basic"
+    },
+    {
+      "name": "Antonio",
+      "username": "antonio",
+      "email": "antonio@bruno.it",
+      "role": "basic",
+      "id": 11
     }
+  ],
+  "roles": [],
+  "passwords": [
+    {
+      "id": 1,
+      "password": "1234567"
+    } 
   ]
 }
