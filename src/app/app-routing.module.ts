@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { NoAccessGuard } from './guards/no-access.guard';
 import { PasswordGuard } from './guards/password.guard';
+import { TestGuard } from './guards/test.guard';
+import { Test2Guard } from './guards/test2.guard';
 import { HomeComponent } from './pages/home/home.component';
 import { PostCommentsComponent } from './pages/post-comments/post-comments.component';
 import { PostDetailComponent } from './pages/post-detail/post-detail.component';
@@ -13,9 +15,13 @@ import { UsersListComponent } from './pages/users-list/users-list.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'posts', component: PostsListComponent },
+  {
+    path: 'posts', 
+    component: PostsListComponent,
+    canActivate: [Test2Guard]
+  },
   { path: 'posts/:postId/comments', component: PostCommentsComponent },
-  { path: 'posts/:postId', component: PostDetailComponent},
+  { path: 'posts/:postId', component: PostDetailComponent },
   /*
     Le rotte 'post' e 'post/:id' servono per gestire l'inserimento e
     la modifica dei post.
@@ -26,8 +32,8 @@ const routes: Routes = [
   { path: 'post', component: PostFormPageComponent },
   { path: 'post/:id', component: PostFormPageComponent },
 
-  { 
-    path: 'users', 
+  {
+    path: 'users',
     component: UsersListComponent,
     canActivate: [PasswordGuard]
   },
